@@ -1,6 +1,6 @@
 import Product from "../../models/Product.js";
 export const getProductsController = async (req, res) => {
-  const pageSize = req.query.pageSize || 3;
+  const pageSize = req.query.pageSize || 9;
   const searchQuery = req.query.search || "";
   const usePagination = req.query.pagination !== "NO";
 

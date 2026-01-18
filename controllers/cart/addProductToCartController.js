@@ -19,9 +19,9 @@ console.log(productId);
       cart.items[itemIndex].total =
         cart.items[itemIndex].quantity * product.price;
 
-      cart.grandTotal = countGrandTotal(cart.items, "total").toFixed(2);
+      cart.grandTotal = countGrandTotal(cart.items, "total");
 
-      await cart.save();
+      await cart.save()
       return res
         .status(200)
         .send({ message: "Product quantity updated in cart" });
